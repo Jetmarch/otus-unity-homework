@@ -1,8 +1,9 @@
 using System;
 using Sirenix.OdinInspector;
 
-namespace Lessons.Architecture.PM
+namespace OtusUnityHomework.Model
 {
+    [Serializable]
     public sealed class PlayerLevel
     {
         public event Action OnLevelUp;

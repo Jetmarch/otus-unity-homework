@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 
-namespace Lessons.Architecture.PM
+namespace OtusUnityHomework.Model
 {
+    [Serializable]
     public sealed class CharacterInfo
     {
         public event Action<CharacterStat> OnStatAdded;
