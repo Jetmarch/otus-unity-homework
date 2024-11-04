@@ -12,12 +12,12 @@ namespace OtusUnityHomework.Model
         public event Action<CharacterStat> OnStatRemoved;
     
         [ShowInInspector]
-        private readonly HashSet<CharacterStat> stats = new();
+        private readonly HashSet<CharacterStat> _stats = new();
 
         [Button]
         public void AddStat(CharacterStat stat)
         {
-            if (this.stats.Add(stat))
+            if (this._stats.Add(stat))
             {
                 this.OnStatAdded?.Invoke(stat);
             }
@@ -26,7 +26,7 @@ namespace OtusUnityHomework.Model
         [Button]
         public void RemoveStat(CharacterStat stat)
         {
-            if (this.stats.Remove(stat))
+            if (this._stats.Remove(stat))
             {
                 this.OnStatRemoved?.Invoke(stat);
             }
@@ -34,7 +34,7 @@ namespace OtusUnityHomework.Model
 
         public CharacterStat GetStat(string name)
         {
-            foreach (var stat in this.stats)
+            foreach (var stat in this._stats)
             {
                 if (stat.Name == name)
                 {
@@ -47,7 +47,7 @@ namespace OtusUnityHomework.Model
 
         public CharacterStat[] GetStats()
         {
-            return this.stats.ToArray();
+            return this._stats.ToArray();
         }
     }
 }

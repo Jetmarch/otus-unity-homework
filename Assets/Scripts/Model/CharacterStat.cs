@@ -8,7 +8,7 @@ namespace OtusUnityHomework.Model
     {
         public event Action<int> OnValueChanged; 
 
-        [ShowInInspector, ReadOnly]
+        [ShowInInspector]
         public string Name { get; private set; }
 
         [ShowInInspector, ReadOnly]

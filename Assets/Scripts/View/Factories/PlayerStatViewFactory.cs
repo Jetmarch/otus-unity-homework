@@ -1,4 +1,5 @@
 using System;
+using OtusUnityHomework.Installers;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -8,11 +9,10 @@ namespace OtusUnityHomework.View
     {
         private readonly GameObject _playerStatPrefab;
         private readonly GameObject _playerStatsContainer;
-        
-        public PlayerStatViewFactory(GameObject playerStatPrefab, GameObject playerStatsContainer)
+        public PlayerStatViewFactory(PlayerStatViewFactoryParams factoryParams)
         {
-            _playerStatPrefab = playerStatPrefab;
-            _playerStatsContainer = playerStatsContainer;
+            _playerStatPrefab = factoryParams.PlayerStatPrefab;
+            _playerStatsContainer = factoryParams.PlayerStatsContainer;
         }
         
         public PlayerStatView Create()

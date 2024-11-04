@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using OtusUnityHomework.Presenter;
 using UnityEngine;
+using VContainer;
 
 namespace OtusUnityHomework.View
 {
@@ -8,19 +9,31 @@ namespace OtusUnityHomework.View
     {
         private IPlayerStatsPresenter _presenter;
         
-        private List<PlayerStatView> _playerStatViews;
+        private List<PlayerStatView> _playerStatViews = new();
         
         private PlayerStatViewFactory _playerStatViewFactory;
+
+        [Inject]
+        private void Construct(PlayerStatViewFactory playerStatViewFactory)
+        {
+            _playerStatViewFactory = playerStatViewFactory;
+        }
 
         public void Show(IPlayerStatsPresenter presenter)
         {
             _presenter = presenter;
-
+            gameObject.SetActive(true);
             ShowStats();
         }
 
         private void ShowStats()
         {
+            foreach (var playerStatView in _playerStatViews)
+            {
+                Destroy(playerStatView.gameObject);
+            }
+            _playerStatViews.Clear();
+            
             foreach (var statText in _presenter.GetStats())
             {
                 var newStatView = _playerStatViewFactory.Create();
@@ -36,6 +49,9 @@ namespace OtusUnityHomework.View
                 playerStatView.Hide();
                 Destroy(playerStatView.gameObject);
             }
+            _playerStatViews.Clear();
+            
+            gameObject.SetActive(false);
         }
     }
 }

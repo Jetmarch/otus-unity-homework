@@ -7,7 +7,7 @@ namespace OtusUnityHomework.View
 {
     public sealed class PlayerLevelView : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _currentLevelText;
+        [SerializeField] private TMP_Text _playerLevelText;
         [SerializeField] private Slider _experienceSlider;
         [SerializeField] private TMP_Text _experienceSliderText;
         [SerializeField] private Button _levelUpButton;
@@ -18,7 +18,10 @@ namespace OtusUnityHomework.View
         {
             _presenter = presenter;
             gameObject.SetActive(true);
-            
+            _playerLevelText.text = _presenter.PlayerLevelText;
+            _experienceSliderText.text = _presenter.ExperienceText;
+            _experienceSlider.maxValue = _presenter.RequiredExperience;
+            _experienceSlider.value = _presenter.CurrentExperience;
             _levelUpButton.onClick.AddListener(RequestLevelUp);
         }
 
