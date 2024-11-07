@@ -11,6 +11,7 @@ namespace OtusUnityHomework.Installers
         [SerializeField] private PlayerStatViewFactoryParams _playerStatViewFactoryParams;
         protected override void Configure(IContainerBuilder builder)
         {
+            builder.Register<CharacterStatPresenterFactory>(Lifetime.Singleton);
             builder.Register<UserPresenterFactory>(Lifetime.Singleton);
             builder.Register<PlayerStatViewFactory>(Lifetime.Singleton)
                 .WithParameter(_playerStatViewFactoryParams);

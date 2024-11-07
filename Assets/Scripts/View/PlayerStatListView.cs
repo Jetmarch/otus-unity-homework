@@ -9,7 +9,7 @@ namespace OtusUnityHomework.View
     {
         private IPlayerStatsPresenter _presenter;
         
-        private readonly List<PlayerStatView> _playerStatViews = new();
+        private readonly List<CharacterStatView> _playerStatViews = new();
         
         private PlayerStatViewFactory _playerStatViewFactory;
 
@@ -35,11 +35,11 @@ namespace OtusUnityHomework.View
             }
             _playerStatViews.Clear();
             
-            foreach (var statText in _presenter.GetStats())
+            foreach (var characterStatPresenter in _presenter.GetStats())
             {
                 var newStatView = _playerStatViewFactory.Create();
+                newStatView.Show(characterStatPresenter);
                 _playerStatViews.Add(newStatView);
-                newStatView.Show(statText);
             }
         }
 

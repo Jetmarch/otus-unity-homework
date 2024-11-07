@@ -5,7 +5,7 @@ namespace OtusUnityHomework.Presenter
 {
     public interface IPlayerStatsPresenter
     {
-        List<string> GetStats();
+        List<ICharacterStatPresenter> GetStats();
         
         event Action OnStatsUpdated;
     }

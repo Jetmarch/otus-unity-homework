@@ -1,5 +1,6 @@
 using System;
 using OtusUnityHomework.Installers;
+using OtusUnityHomework.Presenter;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -15,9 +16,9 @@ namespace OtusUnityHomework.View
             _playerStatsContainer = factoryParams.PlayerStatsContainer;
         }
         
-        public PlayerStatView Create()
+        public CharacterStatView Create()
         {
-            var newStatView = Object.Instantiate(_playerStatPrefab, _playerStatsContainer.transform).GetComponent<PlayerStatView>();
+            var newStatView = Object.Instantiate(_playerStatPrefab, _playerStatsContainer.transform).GetComponent<CharacterStatView>();
             if (newStatView == null)
             {
                 throw new ApplicationException("PlayerStatView prefab does not contain PlayerStatView component");

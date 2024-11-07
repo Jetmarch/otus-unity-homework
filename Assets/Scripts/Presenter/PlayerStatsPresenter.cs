@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using OtusUnityHomework.Helpers;
 using OtusUnityHomework.Model;
 
 namespace OtusUnityHomework.Presenter
@@ -9,17 +10,18 @@ namespace OtusUnityHomework.Presenter
         public event Action OnStatsUpdated;
         
         private readonly CharacterInfo _characterInfo;
-
-        public PlayerStatsPresenter(CharacterInfo characterInfo)
+        private readonly CharacterStatPresenterFactory _characterStatPresenterFactory;
+        public PlayerStatsPresenter(CharacterInfo characterInfo, CharacterStatPresenterFactory characterStatPresenterFactory)
         {
             _characterInfo = characterInfo;
-            _characterInfo.OnStatAdded += CharacterInfoOnOnStatAdded;
-            _characterInfo.OnStatRemoved += CharacterInfoOnOnStatRemoved;
+            _characterStatPresenterFactory = characterStatPresenterFactory;
+            _characterInfo.OnStatAdded += CharacterInfoOnStatAdded;
+            _characterInfo.OnStatRemoved += CharacterInfoOnStatRemoved;
         }
-        public List<string> GetStats()
+        public List<ICharacterStatPresenter> GetStats()
         {
             var characterStats = _characterInfo.GetStats();
-            var statTexts = new List<string>();
+            var characterStatPresenters = new List<ICharacterStatPresenter>();
             for (int i = 0; i < characterStats.Length; i++)
             {
                 if (characterStats[i] == null)
@@ -27,18 +29,18 @@ namespace OtusUnityHomework.Presenter
                     continue;
                 }
                 
-                var newStatString = string.Concat(characterStats[i].Name, ": ", characterStats[i].Value.ToString());
-                statTexts.Add(newStatString);
+                var characterStatPresenter = _characterStatPresenterFactory.Create(characterStats[i]);
+                characterStatPresenters.Add(characterStatPresenter);
             }
             
-            return statTexts;
+            return characterStatPresenters;
         }
 
-        private void CharacterInfoOnOnStatAdded(CharacterStat obj)
+        private void CharacterInfoOnStatAdded(CharacterStat obj)
         {
             OnStatsUpdated?.Invoke();
         }
-        private void CharacterInfoOnOnStatRemoved(CharacterStat obj)
+        private void CharacterInfoOnStatRemoved(CharacterStat obj)
         {
             OnStatsUpdated?.Invoke();
         }

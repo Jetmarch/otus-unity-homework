@@ -23,7 +23,7 @@ namespace OtusUnityHomework.Presenter
         {
             _playerLevel = playerLevel;
             _playerLevel.OnLevelUp += PlayerLevelOnLevelUp;
-            _playerLevel.OnExperienceChanged += EventOnExperienceChanged;
+            _playerLevel.OnExperienceChanged += PlayerLevelOnExperienceChanged;
         }
 
         public void LevelUp()
@@ -47,7 +47,7 @@ namespace OtusUnityHomework.Presenter
             OnLevelDataChanged?.Invoke();
         }
         
-        private void EventOnExperienceChanged(int _)
+        private void PlayerLevelOnExperienceChanged(int _)
         {
             OnLevelDataChanged?.Invoke();
         }

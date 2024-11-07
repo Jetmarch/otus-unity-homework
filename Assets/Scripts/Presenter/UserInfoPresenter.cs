@@ -16,22 +16,22 @@ namespace OtusUnityHomework.Presenter
         public UserInfoPresenter(UserInfo userInfo)
         {
             _userInfo = userInfo;   
-            _userInfo.OnNameChanged += UserInfoOnOnNameChanged;
-            _userInfo.OnDescriptionChanged += UserInfoOnOnDescriptionChanged;
-            _userInfo.OnIconChanged += UserInfoOnOnIconChanged;
+            _userInfo.OnNameChanged += UserInfoOnNameChanged;
+            _userInfo.OnDescriptionChanged += UserInfoOnDescriptionChanged;
+            _userInfo.OnIconChanged += UserInfoOnIconChanged;
         }
 
-        private void UserInfoOnOnNameChanged(string obj)
+        private void UserInfoOnNameChanged(string obj)
         {
             OnUserInfoChanged?.Invoke();
         }
 
-        private void UserInfoOnOnDescriptionChanged(string obj)
+        private void UserInfoOnDescriptionChanged(string obj)
         {
             OnUserInfoChanged?.Invoke();
         }
 
-        private void UserInfoOnOnIconChanged(Sprite obj)
+        private void UserInfoOnIconChanged(Sprite obj)
         {
             OnUserInfoChanged?.Invoke();
         }
