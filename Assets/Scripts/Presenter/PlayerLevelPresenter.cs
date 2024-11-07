@@ -1,3 +1,4 @@
+using System;
 using OtusUnityHomework.Model;
 
 namespace OtusUnityHomework.Presenter
@@ -11,15 +12,20 @@ namespace OtusUnityHomework.Presenter
         public int CurrentExperience => _playerLevel.CurrentExperience;
 
         public int RequiredExperience => _playerLevel.RequiredExperience;
+        
         public bool CanLevelUp => _playerLevel.CanLevelUp();
+        
+        public event Action OnLevelDataChanged;
 
         private readonly PlayerLevel _playerLevel;
         
         public PlayerLevelPresenter(PlayerLevel playerLevel)
         {
             _playerLevel = playerLevel;
+            _playerLevel.OnLevelUp += PlayerLevelOnLevelUp;
+            _playerLevel.OnExperienceChanged += EventOnExperienceChanged;
         }
-        
+
         public void LevelUp()
         {
             _playerLevel.LevelUp();
@@ -34,6 +40,16 @@ namespace OtusUnityHomework.Presenter
         {
             return string.Concat("XP: ", _playerLevel.CurrentExperience.ToString(), 
                 " / ", _playerLevel.RequiredExperience.ToString());
+        }
+
+        private void PlayerLevelOnLevelUp()
+        {
+            OnLevelDataChanged?.Invoke();
+        }
+        
+        private void EventOnExperienceChanged(int _)
+        {
+            OnLevelDataChanged?.Invoke();
         }
     }
 }

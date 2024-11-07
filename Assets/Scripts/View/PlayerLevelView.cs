@@ -18,11 +18,17 @@ namespace OtusUnityHomework.View
         {
             _presenter = presenter;
             gameObject.SetActive(true);
-            _playerLevelText.text = _presenter.PlayerLevelText;
-            _experienceSliderText.text = _presenter.ExperienceText;
-            _experienceSlider.maxValue = _presenter.RequiredExperience;
-            _experienceSlider.value = _presenter.CurrentExperience;
+            _presenter.OnLevelDataChanged += UpdateView;
             _levelUpButton.onClick.AddListener(RequestLevelUp);
+            
+            UpdateView();
+        }
+        
+        public void Hide()
+        {
+            _levelUpButton.onClick.RemoveListener(RequestLevelUp);
+            _presenter.OnLevelDataChanged -= UpdateView;
+            gameObject.SetActive(false);
         }
 
         private void RequestLevelUp()
@@ -33,27 +39,13 @@ namespace OtusUnityHomework.View
             }
         }
 
-        public void Hide()
+        private void UpdateView()
         {
-            _levelUpButton.onClick.RemoveListener(RequestLevelUp);
-            gameObject.SetActive(false);
-        }
-    }
-
-    //TODO: ExperienceSliderView
-    public sealed class ExperienceSliderView : MonoBehaviour
-    {
-        [SerializeField] private Slider _slider;
-        [SerializeField] private TMP_Text _experienceText;
-
-        public void Show(string experience)
-        {
-            
-        }
-
-        public void Hide()
-        {
-            
+            _playerLevelText.text = _presenter.PlayerLevelText;
+            _levelUpButton.interactable = _presenter.CanLevelUp;
+            _experienceSliderText.text = _presenter.ExperienceText;
+            _experienceSlider.maxValue = _presenter.RequiredExperience;
+            _experienceSlider.value = _presenter.CurrentExperience;
         }
     }
 }

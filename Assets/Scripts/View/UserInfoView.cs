@@ -19,6 +19,7 @@ namespace OtusUnityHomework.View
         {
             _presenter = presenter;
             _userInfoContainer.SetActive(true);
+            _presenter.OnUserInfoChanged += UpdateInfo;
             UpdateInfo();
         }
 
@@ -31,6 +32,7 @@ namespace OtusUnityHomework.View
 
         public void Hide()
         {
+            _presenter.OnUserInfoChanged -= UpdateInfo;
             _userInfoContainer.SetActive(false);
         }
     }

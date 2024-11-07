@@ -1,5 +1,6 @@
 using OtusUnityHomework.Presenter;
 using UnityEngine;
+using VContainer;
 
 namespace OtusUnityHomework.View
 {
@@ -10,8 +11,7 @@ namespace OtusUnityHomework.View
         [SerializeField] private PlayerStatListView _playerStatListView;
         [SerializeField] private GameObject _userPopupContainer;
         
-        
-        private IUserPresenter _presenter; 
+        private IUserPresenter _presenter;
         
         public void Show(IUserPresenter presenter)
         {

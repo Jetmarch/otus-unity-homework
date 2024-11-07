@@ -1,26 +1,46 @@
+using System;
+using System.Collections.Generic;
 using OtusUnityHomework.Model;
 
 namespace OtusUnityHomework.Presenter
 {
     public sealed class PlayerStatsPresenter : IPlayerStatsPresenter
     {
-        private CharacterInfo _characterInfo;
+        public event Action OnStatsUpdated;
+        
+        private readonly CharacterInfo _characterInfo;
 
         public PlayerStatsPresenter(CharacterInfo characterInfo)
         {
             _characterInfo = characterInfo;
+            _characterInfo.OnStatAdded += CharacterInfoOnOnStatAdded;
+            _characterInfo.OnStatRemoved += CharacterInfoOnOnStatRemoved;
         }
-        
-        public string[] GetStats()
+        public List<string> GetStats()
         {
             var characterStats = _characterInfo.GetStats();
-            var statTexts = new string[characterStats.Length];
+            var statTexts = new List<string>();
             for (int i = 0; i < characterStats.Length; i++)
             {
-                statTexts[i] = string.Concat(characterStats[i].Name, ": ", characterStats[i].Value.ToString());
+                if (characterStats[i] == null)
+                {
+                    continue;
+                }
+                
+                var newStatString = string.Concat(characterStats[i].Name, ": ", characterStats[i].Value.ToString());
+                statTexts.Add(newStatString);
             }
             
             return statTexts;
+        }
+
+        private void CharacterInfoOnOnStatAdded(CharacterStat obj)
+        {
+            OnStatsUpdated?.Invoke();
+        }
+        private void CharacterInfoOnOnStatRemoved(CharacterStat obj)
+        {
+            OnStatsUpdated?.Invoke();
         }
     }
 }

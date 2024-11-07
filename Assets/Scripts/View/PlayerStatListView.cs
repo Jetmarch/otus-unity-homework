@@ -9,7 +9,7 @@ namespace OtusUnityHomework.View
     {
         private IPlayerStatsPresenter _presenter;
         
-        private List<PlayerStatView> _playerStatViews = new();
+        private readonly List<PlayerStatView> _playerStatViews = new();
         
         private PlayerStatViewFactory _playerStatViewFactory;
 
@@ -23,6 +23,7 @@ namespace OtusUnityHomework.View
         {
             _presenter = presenter;
             gameObject.SetActive(true);
+            _presenter.OnStatsUpdated += ShowStats;
             ShowStats();
         }
 
@@ -50,7 +51,7 @@ namespace OtusUnityHomework.View
                 Destroy(playerStatView.gameObject);
             }
             _playerStatViews.Clear();
-            
+            _presenter.OnStatsUpdated -= ShowStats;
             gameObject.SetActive(false);
         }
     }
