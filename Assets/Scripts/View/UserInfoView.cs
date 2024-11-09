@@ -10,15 +10,13 @@ namespace OtusUnityHomework.View
         [SerializeField] private TMP_Text _userName;
         [SerializeField] private TMP_Text _userDescription;
         [SerializeField] private Image _userIcon;
-
-        [SerializeField] private GameObject _userInfoContainer;
         
         private IUserInfoPresenter _presenter;
 
         public void Show(IUserInfoPresenter presenter)
         {
             _presenter = presenter;
-            _userInfoContainer.SetActive(true);
+            gameObject.SetActive(true);
             _presenter.OnUserInfoChanged += UpdateInfo;
             UpdateInfo();
         }
@@ -33,7 +31,7 @@ namespace OtusUnityHomework.View
         public void Hide()
         {
             _presenter.OnUserInfoChanged -= UpdateInfo;
-            _userInfoContainer.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -4,6 +4,6 @@ namespace OtusUnityHomework.Presenter
     {
         IUserInfoPresenter UserInfo { get; }
         IPlayerLevelPresenter PlayerLevel { get; }
-        IPlayerStatsPresenter PlayerStats { get; }
+        ICharacterStatStoragePresenter CharacterStatStorage { get; }
     }
 }

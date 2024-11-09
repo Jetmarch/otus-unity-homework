@@ -4,8 +4,7 @@ namespace OtusUnityHomework.Presenter
 {
     public interface ICharacterStatPresenter
     {
-        string Name { get; }
-        int Value { get; }
+        string CharacterStat { get; }
         event Action OnValueChanged;
     }
 }

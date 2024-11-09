@@ -6,11 +6,11 @@ namespace OtusUnityHomework.Model.SO
     public class UserData : ScriptableObject
     {
         public UserInfo UserInfo => _userInfo;
-        public CharacterInfo CharacterInfo => _characterInfo;
+        public CharacterStatStorage CharacterStatStorage => _characterStatStorage;
         public PlayerLevel PlayerLevel => _playerLevel;
         
         [SerializeField] private UserInfo _userInfo;
-        [SerializeField] private CharacterInfo _characterInfo;
+        [SerializeField] private CharacterStatStorage _characterStatStorage;
         [SerializeField] private PlayerLevel _playerLevel;
     }
 }

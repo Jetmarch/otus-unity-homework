@@ -6,8 +6,7 @@ namespace Presenter
 {
     public sealed class CharacterStatPresenter : ICharacterStatPresenter
     {
-        public string Name => _characterStat.Name;
-        public int Value => _characterStat.Value;
+        public string CharacterStat => string.Concat(_characterStat.Name, ": ", _characterStat.Value.ToString());
         public event Action OnValueChanged;
 
         private readonly CharacterStat _characterStat;

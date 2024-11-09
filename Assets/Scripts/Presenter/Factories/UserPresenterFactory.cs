@@ -16,7 +16,7 @@ namespace OtusUnityHomework.Helpers
         {
             var userInfoPresenter = new UserInfoPresenter(userData.UserInfo);
             var playerLevelPresenter = new PlayerLevelPresenter(userData.PlayerLevel);
-            var playerStatsPresenter = new PlayerStatsPresenter(userData.CharacterInfo, _characterStatPresenterFactory);
+            var playerStatsPresenter = new CharacterStatStoragePresenter(userData.CharacterStatStorage, _characterStatPresenterFactory);
             
             var userPresenter = new UserPresenter(userInfoPresenter, playerLevelPresenter, playerStatsPresenter);
             return userPresenter;

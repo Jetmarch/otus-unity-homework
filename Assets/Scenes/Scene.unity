@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 868569313}
   - component: {fileID: 868569314}
   m_Layer: 5
-  m_Name: UserPopupView
+  m_Name: UserView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _userInfoView: {fileID: 934279516}
   _playerLevelView: {fileID: 1796695512}
-  _playerStatListView: {fileID: 1505052948}
+  _characterStatStorageView: {fileID: 1505052948}
   _userPopupContainer: {fileID: 1616044052}
 --- !u!1 &871218891
 GameObject:
@@ -1554,7 +1554,7 @@ GameObject:
   - component: {fileID: 1505052947}
   - component: {fileID: 1505052948}
   m_Layer: 5
-  m_Name: PlayerStats
+  m_Name: CharacterStatStorage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

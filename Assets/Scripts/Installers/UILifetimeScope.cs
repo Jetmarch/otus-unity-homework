@@ -8,13 +8,13 @@ namespace OtusUnityHomework.Installers
 {
     public class UILifetimeScope : LifetimeScope
     {
-        [SerializeField] private PlayerStatViewFactoryParams _playerStatViewFactoryParams;
+        [SerializeField] private CharacterStatViewFactoryParams _characterStatViewFactoryParams;
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.Register<CharacterStatPresenterFactory>(Lifetime.Singleton);
-            builder.Register<UserPresenterFactory>(Lifetime.Singleton);
-            builder.Register<PlayerStatViewFactory>(Lifetime.Singleton)
-                .WithParameter(_playerStatViewFactoryParams);
+            builder.Register<CharacterStatPresenterFactory>(Lifetime.Scoped);
+            builder.Register<UserPresenterFactory>(Lifetime.Scoped);
+            builder.Register<CharacterStatViewFactory>(Lifetime.Scoped)
+                .WithParameter(_characterStatViewFactoryParams);
         }
     }
 }

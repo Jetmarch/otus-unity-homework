@@ -8,7 +8,7 @@ namespace OtusUnityHomework.Helpers
 {
     public sealed class UserPopupHelper : MonoBehaviour
     {
-        [SerializeField] private UserPopupView _view;
+        [SerializeField] private UserView _view;
         [SerializeField] private UserData _userData;
         
         private UserPresenterFactory _userPresenterFactory;

@@ -25,7 +25,7 @@ namespace OtusUnityHomework.View
 
         private void UpdateView()
         {
-            _statText.text = string.Concat(_presenter.Name, ": ", _presenter.Value.ToString());
+            _statText.text = _presenter.CharacterStat;
         }
     }
 }
