@@ -57,4 +57,27 @@ namespace OtusHomework.ECS.Components
     public struct SpawnRequest
     {
     }
+
+    [Serializable]
+    public struct Team
+    {
+        public UnitTeam Value;
+    }
+
+    [Serializable]
+    public struct Health
+    {
+        public float Value;
+    }
+
+    [Serializable]
+    public struct DamageRequest
+    {
+        public float Value;
+    }
+
+    [Serializable]
+    public struct DeathFlag
+    {
+    }
 }

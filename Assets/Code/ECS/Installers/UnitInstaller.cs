@@ -7,7 +7,8 @@ namespace OtusHomework.ECS.Installers
     public class UnitInstaller : EntityInstaller
     {
         [SerializeField] private float _moveSpeed = 5.0f;
-
+        [SerializeField] private float _health = 5f;
+        
         [SerializeField] private Transform _firePoint;
         [SerializeField] private Entity _bulletPrefab;
         
@@ -23,6 +24,7 @@ namespace OtusHomework.ECS.Installers
                 FirePoint = _firePoint,
                 BulletPrefab = _bulletPrefab,
             });
+            entity.AddData(new Health { Value = _health });
         }
 
         protected override void Dispose(Entity entity)

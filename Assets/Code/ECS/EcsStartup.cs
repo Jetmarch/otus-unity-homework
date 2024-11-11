@@ -21,10 +21,12 @@ namespace OtusHomework.ECS
             _systems = new EcsSystems(_defaultWorld);
             _systems.AddWorld(_eventWorld, EcsWorlds.Events);
             _systems
+                .Add(new DamageRequestSystem())
+                .Add(new DeathSystem())
                 .Add(new FireRequestSystem())
                 .Add(new MovementSystem())
-                
                 .Add(new SpawnSystem())
+                
                 
                 .Add(new TransformViewSystem())
 #if UNITY_EDITOR

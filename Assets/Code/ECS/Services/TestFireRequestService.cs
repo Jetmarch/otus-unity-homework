@@ -14,6 +14,11 @@ namespace OtusHomework.ECS.Services
             {
                 _character.SetData(new FireRequest());
             }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                _character.SetData(new DamageRequest() {Value = 1});
+            }
         }
     }
 }

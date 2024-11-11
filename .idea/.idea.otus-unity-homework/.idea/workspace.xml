@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ff18f10-c365-4401-9966-f45509c87803" name="Changes" comment="" />
+    <list default="true" id="5ff18f10-c365-4401-9966-f45509c87803" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ArmySpawnSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ArmySpawnSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/DamageRequestSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/DamageRequestSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/DeathSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/DeathSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Unit.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Unit/UnitTeam.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Unit/UnitTeam.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.otus-unity-homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.otus-unity-homework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Components/Components.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Components/Components.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/EcsStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/EcsStartup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Installers/UnitInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/UnitInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Services/TestFireRequestService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/TestFireRequestService.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +57,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/LeoECS/ecslite-2023.11.22/src/components.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/LeoECS/ecslite-2023.11.22/src/systems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/LeoECS/ecslite-2023.11.22/src/worlds.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/LeoECS/ecslite-entities/EntityManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -56,7 +72,7 @@
   &quot;keyToString&quot;: {
     &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;homework__presentation__model&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;homework__ecs&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -94,10 +110,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="233316">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="233316" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -118,6 +134,8 @@
       <workItem from="1731001008215" duration="6899000" />
       <workItem from="1731165136011" duration="6362000" />
       <workItem from="1731175487719" duration="465000" />
+      <workItem from="1731261639171" duration="14000" />
+      <workItem from="1731341405943" duration="1515000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add homework assets">
       <option name="closed" value="true" />
