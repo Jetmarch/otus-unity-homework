@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Leopotam.EcsLite.Entities;
 using UnityEngine;
 // ReSharper disable InconsistentNaming
@@ -40,6 +41,7 @@ namespace OtusHomework.ECS.Components
     {
         public Transform FirePoint;
         public Entity BulletPrefab;
+        public float FireRate;
     }
     
     [Serializable]
@@ -79,5 +81,29 @@ namespace OtusHomework.ECS.Components
     [Serializable]
     public struct DeathFlag
     {
+    }
+
+    [Serializable]
+    public struct AttackDistance
+    {
+        public float Value;
+    }
+
+    [Serializable]
+    public struct Target
+    {
+        public Entity Value;
+    }
+
+    [Serializable]
+    public struct ShootDelay
+    {
+        public float Value;
+    }
+
+    [Serializable]
+    public struct TimeToLive
+    {
+        public float Value;
     }
 }

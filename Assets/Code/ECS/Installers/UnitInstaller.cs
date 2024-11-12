@@ -8,7 +8,10 @@ namespace OtusHomework.ECS.Installers
     {
         [SerializeField] private float _moveSpeed = 5.0f;
         [SerializeField] private float _health = 5f;
+        [SerializeField] private float _attackDistance = 5f;
+        [SerializeField] private float _fireRate = 1f;
         
+        [SerializeField] private UnitTeam _team;
         [SerializeField] private Transform _firePoint;
         [SerializeField] private Entity _bulletPrefab;
         
@@ -23,8 +26,11 @@ namespace OtusHomework.ECS.Installers
             {
                 FirePoint = _firePoint,
                 BulletPrefab = _bulletPrefab,
+                FireRate = _fireRate
             });
             entity.AddData(new Health { Value = _health });
+            entity.AddData(new Team { Value = _team });
+            entity.AddData(new AttackDistance() { Value = _attackDistance });
         }
 
         protected override void Dispose(Entity entity)

@@ -8,6 +8,7 @@ namespace OtusHomework.ECS.Systems
     public sealed class MovementSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<Position, MoveDirection, MoveSpeed>> _filter;
+
         
         public void Run(IEcsSystems systems)
         {

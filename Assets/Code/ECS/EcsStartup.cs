@@ -24,8 +24,12 @@ namespace OtusHomework.ECS
                 .Add(new DamageRequestSystem())
                 .Add(new DeathSystem())
                 .Add(new FireRequestSystem())
+                .Add(new ShootDelaySystem())
                 .Add(new MovementSystem())
                 .Add(new SpawnSystem())
+                .Add(new MoveToTargetSystem())
+                .Add(new ShootToTargetSystem())
+                .Add(new TimeToLiveSystem())
                 
                 
                 .Add(new TransformViewSystem())

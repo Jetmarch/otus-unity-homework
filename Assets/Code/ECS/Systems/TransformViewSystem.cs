@@ -21,11 +21,10 @@ namespace OtusHomework.ECS.Systems
                 
                 transformView.Value.position = position.Value;
 
-                if (_rotationPool.Value.Has(entity))
-                {
-                    var rotation = _rotationPool.Value.Get(entity).Value;
-                    transformView.Value.rotation = rotation;
-                }
+                if (!_rotationPool.Value.Has(entity)) continue;
+                
+                var rotation = _rotationPool.Value.Get(entity).Value;
+                transformView.Value.rotation = rotation;
             }
         }
     }
