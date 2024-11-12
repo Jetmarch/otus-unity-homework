@@ -61,12 +61,6 @@ namespace OtusHomework.ECS.Components
     }
 
     [Serializable]
-    public struct Team
-    {
-        public UnitTeam Value;
-    }
-
-    [Serializable]
     public struct Health
     {
         public float Value;
@@ -105,5 +99,11 @@ namespace OtusHomework.ECS.Components
     public struct TimeToLive
     {
         public float Value;
+    }
+
+    [Serializable]
+    public struct Unit
+    {
+        public UnitTeam Team;
     }
 }

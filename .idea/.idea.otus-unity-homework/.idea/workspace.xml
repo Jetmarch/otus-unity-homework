@@ -4,28 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ff18f10-c365-4401-9966-f45509c87803" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/UnitEnemySensor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/UnitEnemySensor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MoveToTargetSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MoveToTargetSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootDelaySystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootDelaySystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootToTargetSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootToTargetSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TimeToLiveSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TimeToLiveSystem.cs.meta" afterDir="false" />
+    <list default="true" id="5ff18f10-c365-4401-9966-f45509c87803" name="Changes" comment="feat: move and shoot to target, time to live, shoot delay">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/DamageOnCollisionService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/DamageOnCollisionService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/CheckTargetSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/CheckTargetSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.otus-unity-homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.otus-unity-homework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Components/Components.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Components/Components.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/EcsStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/EcsStartup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Installers/BulletInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/BulletInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Installers/UnitInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/UnitInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/FireRequestSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/FireRequestSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MovementSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TransformViewSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TransformViewSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/DamageRequestSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/DamageRequestSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MoveToTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MoveToTargetSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootToTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootToTargetSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Level/Prefabs/Bullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Level/Prefabs/Bullet.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +137,7 @@
       <workItem from="1731175487719" duration="465000" />
       <workItem from="1731261639171" duration="14000" />
       <workItem from="1731341405943" duration="2192000" />
-      <workItem from="1731434683587" duration="6442000" />
+      <workItem from="1731434683587" duration="8750000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add homework assets">
       <option name="closed" value="true" />
@@ -226,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731342985229</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: move and shoot to target, time to live, shoot delay">
+      <option name="closed" value="true" />
+      <created>1731441384973</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731441384973</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +264,8 @@
     <MESSAGE value="feat: characterStatPresenter, refactor" />
     <MESSAGE value="feat: multiple renaming, refactoring" />
     <MESSAGE value="feat: damage and death systems" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: damage and death systems" />
+    <MESSAGE value="feat: move and shoot to target, time to live, shoot delay" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: move and shoot to target, time to live, shoot delay" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -6,18 +6,24 @@ namespace OtusHomework.ECS.Systems
 {
     public sealed class DamageRequestSystem : IEcsRunSystem
     {
-        private readonly EcsFilterInject<Inc<Health, DamageRequest>> _filter;
+        private readonly EcsFilterInject<Inc<DamageRequest>> _filter;
         
+        private readonly EcsPoolInject<Health> _healthPool;
         private readonly EcsPoolInject<DeathFlag> _deathFlagPool;
         
         public void Run(IEcsSystems systems)
         {
-            var healthPool = _filter.Pools.Inc1;
-            var damageRequestPool = _filter.Pools.Inc2;
+            var damageRequestPool = _filter.Pools.Inc1;
             
             foreach (var entity in _filter.Value)
             {
-                ref var health = ref healthPool.Get(entity);
+                if (!_healthPool.Value.Has(entity))
+                {
+                    damageRequestPool.Del(entity);
+                    continue;
+                }
+                
+                ref var health = ref _healthPool.Value.Get(entity);
                 var damageRequest = damageRequestPool.Get(entity);
                 
                 health.Value -= damageRequest.Value;
@@ -26,7 +32,6 @@ namespace OtusHomework.ECS.Systems
                 {
                     _deathFlagPool.Value.Add(entity);
                 }
-                
                 damageRequestPool.Del(entity);
             }
         }

@@ -276,7 +276,7 @@ MonoBehaviour:
   _fireRate: 1
   _team: 1
   _firePoint: {fileID: 1086891884}
-  _bulletPrefab: {fileID: 3315508711105176971, guid: 16eeae864aea93142b9a4e04fd632734, type: 3}
+  _bulletPrefab: {fileID: 3315508711105176971, guid: 4f34851b81002cb48ae0ecc20c0a7b9c, type: 3}
 --- !u!114 &69780040
 MonoBehaviour:
   m_ObjectHideFlags: 0

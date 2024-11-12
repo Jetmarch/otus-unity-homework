@@ -12,6 +12,7 @@ namespace OtusHomework.ECS.Services
         {
             var entity = other.GetComponent<Entity>();
             if (entity == null) return;
+            if (!entity.HasData<Unit>()) return;
             _owner.SetData(new Target() { Value = entity });
         }
 
@@ -19,6 +20,7 @@ namespace OtusHomework.ECS.Services
         {
             var entity = other.GetComponent<Entity>();
             if (entity == null) return;
+            if (!entity.HasData<Unit>()) return;
             _owner.RemoveData<Target>();
         }
     }

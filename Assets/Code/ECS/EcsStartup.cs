@@ -27,6 +27,8 @@ namespace OtusHomework.ECS
                 .Add(new ShootDelaySystem())
                 .Add(new MovementSystem())
                 .Add(new SpawnSystem())
+                
+                .Add(new CheckTargetSystem())
                 .Add(new MoveToTargetSystem())
                 .Add(new ShootToTargetSystem())
                 .Add(new TimeToLiveSystem())

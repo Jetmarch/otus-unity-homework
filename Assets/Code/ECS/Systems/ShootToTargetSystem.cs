@@ -13,7 +13,6 @@ namespace OtusHomework.ECS.Systems
         public void Run(IEcsSystems systems)
         {
             var targetPool = _filter.Pools.Inc1;
-            var bulletWeaponPool = _filter.Pools.Inc2;
             var attackDistancePool = _filter.Pools.Inc3;
             var positionPool = _filter.Pools.Inc4;
 
@@ -22,7 +21,6 @@ namespace OtusHomework.ECS.Systems
                 if (_fireRequestPool.Value.Has(entity)) continue;
                 
                 var target = targetPool.Get(entity);
-                var bulletWeapon = bulletWeaponPool.Get(entity);
                 var attackDistance = attackDistancePool.Get(entity);
                 var position = positionPool.Get(entity);
 
