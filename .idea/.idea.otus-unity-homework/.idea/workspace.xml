@@ -4,20 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ff18f10-c365-4401-9966-f45509c87803" name="Changes" comment="feat: move and shoot to target, time to live, shoot delay">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/DamageOnCollisionService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/DamageOnCollisionService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/CheckTargetSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/CheckTargetSystem.cs.meta" afterDir="false" />
+    <list default="true" id="5ff18f10-c365-4401-9966-f45509c87803" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/ArmySpawnPointInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/ArmySpawnPointInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/UnitPushForwardSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/UnitPushForwardSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.otus-unity-homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.otus-unity-homework/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Components/Components.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Components/Components.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/EcsStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/EcsStartup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Installers/BulletInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/BulletInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Installers/UnitInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/UnitInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/DamageRequestSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/DamageRequestSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Services/DamageOnCollisionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/DamageOnCollisionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Services/TestFireRequestService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Services/TestFireRequestService.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Services/UnitEnemySensor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/UnitEnemySensor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ArmySpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ArmySpawnSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/CheckTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/CheckTargetSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/FireRequestSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/FireRequestSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MoveToTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MoveToTargetSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootDelaySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootDelaySystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootToTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootToTargetSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level/Prefabs/Bullet.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level/Prefabs/Bullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/SpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/SpawnSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TimeToLiveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TimeToLiveSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TransformViewSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TransformViewSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,10 +120,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14312">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14312" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -137,7 +146,8 @@
       <workItem from="1731175487719" duration="465000" />
       <workItem from="1731261639171" duration="14000" />
       <workItem from="1731341405943" duration="2192000" />
-      <workItem from="1731434683587" duration="8750000" />
+      <workItem from="1731434683587" duration="8959000" />
+      <workItem from="1731521138467" duration="2815000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add homework assets">
       <option name="closed" value="true" />
@@ -227,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731441384973</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: bullet damage on collision, check target system">
+      <option name="closed" value="true" />
+      <created>1731443655266</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731443655266</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +283,8 @@
     <MESSAGE value="feat: multiple renaming, refactoring" />
     <MESSAGE value="feat: damage and death systems" />
     <MESSAGE value="feat: move and shoot to target, time to live, shoot delay" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: move and shoot to target, time to live, shoot delay" />
+    <MESSAGE value="feat: bullet damage on collision, check target system" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: bullet damage on collision, check target system" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

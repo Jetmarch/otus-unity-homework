@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace OtusHomework.ECS.Services
 {
-    public class UnitEnemySensor : MonoBehaviour
+    public sealed class UnitEnemySensor : MonoBehaviour
     {
         [SerializeField] private Entity _owner;
         

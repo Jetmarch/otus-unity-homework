@@ -90,7 +90,7 @@ namespace OtusHomework.ECS.Components
     }
 
     [Serializable]
-    public struct ShootDelay
+    public struct ActionDelay
     {
         public float Value;
     }
@@ -105,5 +105,12 @@ namespace OtusHomework.ECS.Components
     public struct Unit
     {
         public UnitTeam Team;
+    }
+
+    [Serializable]
+    public struct SpawnPoint
+    {
+        public int SpawnCount;
+        public float SpawnRadius;
     }
 }

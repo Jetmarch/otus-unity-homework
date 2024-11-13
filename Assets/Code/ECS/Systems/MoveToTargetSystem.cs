@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace OtusHomework.ECS.Systems
 {
-    public class MoveToTargetSystem : IEcsRunSystem
+    public sealed class MoveToTargetSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<Target, MoveDirection, Position, Rotation, AttackDistance>> _filter;
         

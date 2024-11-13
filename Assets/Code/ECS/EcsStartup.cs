@@ -21,6 +21,7 @@ namespace OtusHomework.ECS
             _systems = new EcsSystems(_defaultWorld);
             _systems.AddWorld(_eventWorld, EcsWorlds.Events);
             _systems
+                .Add(new ArmySpawnSystem())
                 .Add(new DamageRequestSystem())
                 .Add(new DeathSystem())
                 .Add(new FireRequestSystem())
@@ -29,6 +30,7 @@ namespace OtusHomework.ECS
                 .Add(new SpawnSystem())
                 
                 .Add(new CheckTargetSystem())
+                .Add(new UnitPushForwardSystem())
                 .Add(new MoveToTargetSystem())
                 .Add(new ShootToTargetSystem())
                 .Add(new TimeToLiveSystem())

@@ -4,7 +4,7 @@ using OtusHomework.ECS.Components;
 
 namespace OtusHomework.ECS.Systems
 {
-    public class TransformViewSystem : IEcsRunSystem
+    public sealed class TransformViewSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<Position, TransformView>> _filter;
         private readonly EcsPoolInject<Rotation> _rotationPool;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace OtusHomework.ECS.Systems
 {
-    public class TimeToLiveSystem : IEcsRunSystem
+    public sealed class TimeToLiveSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<TimeToLive>> _filter;
         

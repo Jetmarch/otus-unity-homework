@@ -7,9 +7,9 @@ namespace OtusHomework.ECS.Systems
 {
     public sealed class FireRequestSystem : IEcsRunSystem
     {
-        private readonly EcsFilterInject<Inc<BulletWeapon, FireRequest>, Exc<ShootDelay>> _filter;
+        private readonly EcsFilterInject<Inc<BulletWeapon, FireRequest>, Exc<ActionDelay>> _filter;
         
-        private readonly EcsPoolInject<ShootDelay> _shootDelayPool;
+        private readonly EcsPoolInject<ActionDelay> _actionDelayPool;
         
         private readonly EcsWorldInject _eventWorld = EcsWorlds.Events;
         private readonly EcsPoolInject<SpawnRequest> _spawnRequestPool = EcsWorlds.Events;
@@ -26,7 +26,7 @@ namespace OtusHomework.ECS.Systems
             {
                 var bulletWeapon = bulletWeaponPool.Get(entity);
                 fireRequestPool.Del(entity);
-                _shootDelayPool.Value.Add(entity) = new ShootDelay() { Value = bulletWeapon.FireRate };
+                _actionDelayPool.Value.Add(entity) = new ActionDelay() { Value = bulletWeapon.FireRate };
 
                 var newEntity = _eventWorld.Value.NewEntity();
                 _spawnRequestPool.Value.Add(newEntity);

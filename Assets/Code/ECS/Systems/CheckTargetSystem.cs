@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace OtusHomework.ECS.Systems
 {
-    public class CheckTargetSystem : IEcsRunSystem
+    public sealed class CheckTargetSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<Target>> _filter;
         
@@ -16,12 +16,10 @@ namespace OtusHomework.ECS.Systems
             foreach (var entity in _filter.Value)
             {
                 var target = targetPool.Get(entity);
+
+                if (target.Value.IsAlive()) continue;
                 
-                if (!target.Value.IsAlive())
-                {
-                    Debug.Log(target.Value.gameObject.name + " is dead");
-                    targetPool.Del(entity);
-                }
+                targetPool.Del(entity);
             }
         }
     }

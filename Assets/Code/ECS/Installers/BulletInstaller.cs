@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace OtusHomework.ECS.Installers
 {
-    public class BulletInstaller : EntityInstaller
+    public sealed class BulletInstaller : EntityInstaller
     {
         [SerializeField] private float _moveSpeed = 5.0f;
         [SerializeField] private float _timeToLive = 3.0f;

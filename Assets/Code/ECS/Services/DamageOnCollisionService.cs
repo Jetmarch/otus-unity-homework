@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace OtusHomework.ECS.Services
 {
-    public class DamageOnCollisionService : MonoBehaviour
+    public sealed class DamageOnCollisionService : MonoBehaviour
     {
         [SerializeField] private float _damage;
         
@@ -12,6 +12,11 @@ namespace OtusHomework.ECS.Services
         {
             var entity = other.GetComponent<Entity>();
             if (entity == null) return;
+            if (entity.HasData<DamageRequest>())
+            {
+                entity.GetData<DamageRequest>().Value += _damage;
+                return;
+            }
             
             entity.AddData(new DamageRequest() { Value = _damage });
         }

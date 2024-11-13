@@ -5,7 +5,7 @@ using OtusHomework.ECS.Components;
 
 namespace OtusHomework.ECS.Systems
 {
-    public class SpawnSystem : IEcsRunSystem
+    public sealed class SpawnSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<SpawnRequest, Prefab, Position, Rotation>> _filter = EcsWorlds.Events;
         

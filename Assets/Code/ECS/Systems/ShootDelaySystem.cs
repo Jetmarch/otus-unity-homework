@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace OtusHomework.ECS.Systems
 {
-    public class ShootDelaySystem : IEcsRunSystem
+    public sealed class ShootDelaySystem : IEcsRunSystem
     {
-        private readonly EcsFilterInject<Inc<ShootDelay>> _filter;
+        private readonly EcsFilterInject<Inc<ActionDelay>> _filter;
         
         public void Run(IEcsSystems systems)
         {

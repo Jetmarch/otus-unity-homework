@@ -1,10 +1,11 @@
 using Leopotam.EcsLite.Entities;
 using OtusHomework.ECS.Components;
 using UnityEngine;
+using Vector3 = System.Numerics.Vector3;
 
 namespace OtusHomework.ECS.Installers
 {
-    public class UnitInstaller : EntityInstaller
+    public sealed class UnitInstaller : EntityInstaller
     {
         [SerializeField] private float _moveSpeed = 5.0f;
         [SerializeField] private float _health = 5f;
@@ -20,7 +21,7 @@ namespace OtusHomework.ECS.Installers
             entity.AddData(new Unit { Team = _team});
             entity.AddData(new Position { Value = transform.position });
             entity.AddData(new Rotation { Value = transform.rotation });
-            entity.AddData(new MoveDirection { Value = Vector3.zero });
+            entity.AddData(new MoveDirection { Value = transform.forward });
             entity.AddData(new MoveSpeed { Value = _moveSpeed });
             entity.AddData(new TransformView { Value = transform });
             entity.AddData(new BulletWeapon

@@ -4,7 +4,7 @@ using OtusHomework.ECS.Components;
 
 namespace OtusHomework.ECS.Systems
 {
-    public class ShootToTargetSystem : IEcsRunSystem
+    public sealed class ShootToTargetSystem : IEcsRunSystem
     {
         private readonly EcsFilterInject<Inc<Target, BulletWeapon, AttackDistance, Position>> _filter;
 
