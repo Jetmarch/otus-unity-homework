@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace OtusHomework.ECS.Services
 {
-    public sealed class DamageOnCollisionService : MonoBehaviour
+    public sealed class DamageOnCollisionController : MonoBehaviour
     {
         [SerializeField] private float _damage;
         

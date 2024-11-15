@@ -1,7 +1,6 @@
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using OtusHomework.ECS.Components;
-using UnityEngine;
 
 namespace OtusHomework.ECS.Systems
 {

@@ -1,7 +1,6 @@
 using Leopotam.EcsLite.Entities;
 using OtusHomework.ECS.Components;
 using UnityEngine;
-using Vector3 = System.Numerics.Vector3;
 
 namespace OtusHomework.ECS.Installers
 {

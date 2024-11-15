@@ -1,9 +1,6 @@
-using System;
 using Leopotam.EcsLite;
 using Leopotam.EcsLite.Di;
 using OtusHomework.ECS.Components;
-using UnityEngine;
-using Vector3 = System.Numerics.Vector3;
 
 namespace OtusHomework.ECS.Systems
 {
@@ -42,7 +39,7 @@ namespace OtusHomework.ECS.Systems
                     _positionPool.Value.Add(spawnRequest) = new Position { Value = entityPosition };
                     _rotationPool.Value.Add(spawnRequest) = new Rotation { Value = rotation.Value };
                     _prefabPool.Value.Add(spawnRequest) = new Prefab { Value = prefab.Value };
-                };
+                }
             }
         }
     }

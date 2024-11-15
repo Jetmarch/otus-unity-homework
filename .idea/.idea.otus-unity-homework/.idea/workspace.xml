@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ff18f10-c365-4401-9966-f45509c87803" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/ArmySpawnPointInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/ArmySpawnPointInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/UnitPushForwardSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/UnitPushForwardSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.otus-unity-homework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.otus-unity-homework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Components/Components.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Components/Components.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/EcsStartup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/EcsStartup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Installers/BulletInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/BulletInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Installers/UnitInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Installers/UnitInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Services/DamageOnCollisionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/DamageOnCollisionService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Services/TestFireRequestService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Services/TestFireRequestService.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Services/UnitEnemySensor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Services/UnitEnemySensor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ArmySpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ArmySpawnSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/CheckTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/CheckTargetSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/FireRequestSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/FireRequestSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MoveToTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/MoveToTargetSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootDelaySystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootDelaySystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootToTargetSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/ShootToTargetSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/SpawnSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/SpawnSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TimeToLiveSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TimeToLiveSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TransformViewSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ECS/Systems/TransformViewSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="5ff18f10-c365-4401-9966-f45509c87803" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,9 +32,15 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/52b9baf1179541de99276c484eab21e415a00/d2/3c6cc54f/ButtonAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2a97e0383e8404c9fc0ae19d58f57f146a800/ec/27243863/List`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ff7e2efc13d145149706e914b39ea0347800/db/9fcb931e/CharacterInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Learning/otus-unity-homework/Assets/Code/ECS/Components/Components.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/ECS/Components/Components.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/ECS/EcsStartup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Learning/otus-unity-homework/Assets/Code/ECS/Installers/BulletInstaller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/ECS/Installers/UnitInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Learning/otus-unity-homework/Assets/Code/ECS/Services/UnitEnemySensor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Learning/otus-unity-homework/Assets/Code/ECS/Systems/ArmySpawnSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Learning/otus-unity-homework/Assets/Code/ECS/Systems/TimeToLiveSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Learning/otus-unity-homework/Assets/Code/ECS/Systems/TransformViewSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HiddenPlugins/Sirenix/Odin Inspector/Scripts/Editor/AssemblyImportSettingsAutomation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HiddenPlugins/Sirenix/Odin Inspector/Scripts/Editor/BuildAOTAutomation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HiddenPlugins/Sirenix/Odin Inspector/Scripts/Editor/EnsureOdinInspectorDefine.cs" root0="SKIP_HIGHLIGHTING" />
@@ -147,7 +129,7 @@
       <workItem from="1731261639171" duration="14000" />
       <workItem from="1731341405943" duration="2192000" />
       <workItem from="1731434683587" duration="8959000" />
-      <workItem from="1731521138467" duration="2815000" />
+      <workItem from="1731521138467" duration="3001000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add homework assets">
       <option name="closed" value="true" />
@@ -245,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731443655266</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: army spawner and push forward systems, sealing classes">
+      <option name="closed" value="true" />
+      <created>1731524071126</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731524071126</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +274,8 @@
     <MESSAGE value="feat: damage and death systems" />
     <MESSAGE value="feat: move and shoot to target, time to live, shoot delay" />
     <MESSAGE value="feat: bullet damage on collision, check target system" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: bullet damage on collision, check target system" />
+    <MESSAGE value="feat: army spawner and push forward systems, sealing classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: army spawner and push forward systems, sealing classes" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

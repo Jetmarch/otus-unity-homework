@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _unitPrefab: {fileID: 4647195958730319596, guid: 81070c11631c6c4499ade65c112deaa3, type: 3}
-  _spawnCount: 250
+  _spawnCount: 100
   _spawnRadius: 50
 --- !u!114 &618279363
 MonoBehaviour:
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _unitPrefab: {fileID: 653458787653786928, guid: fcc613964a8071c4c8a67ba40fa952a0, type: 3}
-  _spawnCount: 250
+  _spawnCount: 100
   _spawnRadius: 50
 --- !u!114 &1164428256
 MonoBehaviour:

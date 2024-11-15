@@ -59,9 +59,6 @@ namespace OtusHomework.ECS
         {
             if (_systems != null) 
             {
-                // list of custom worlds will be cleared
-                // during IEcsSystems.Destroy(). so, you
-                // need to save it here if you need.
                 _systems.Destroy();
                 _systems = null;
             }
